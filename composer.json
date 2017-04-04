@@ -58,7 +58,14 @@
         ],
         "post-update-cmd": [
             "@symfony-scripts"
+        ],
+        "post-package-update": [
+            "AppBundle\\Install\\PostInstallScript::postPackageUpdate"
+        ],
+        "post-package-install": [
+            "AppBundle\\Install\\PostInstallScript::postPackageInstall"
         ]
+        
     },
     "config": {
         "platform": {
