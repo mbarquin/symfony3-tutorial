@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>{% block title %}Welcome!{% endblock %}</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -29,7 +29,9 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    {% block stylesheets %}{% endblock %}
+    
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 </head>
 
 <body>
@@ -370,13 +372,7 @@
         <!-- Page Content -->
         <div id="page-wrapper">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">Blank</h1>
-                    </div>
-                    <!-- /.col-lg-12 -->
-                </div>
-                <!-- /.row -->
+                {% block body %}{% endblock %}
             </div>
             <!-- /.container-fluid -->
         </div>
@@ -397,6 +393,7 @@
     <!-- Custom Theme JavaScript -->
     <script src="/vendor/startbootstrap-sb-admin-2/js/sb-admin-2.js"></script>
 
+    {% block javascripts %}{% endblock %}
 </body>
 
 </html>
