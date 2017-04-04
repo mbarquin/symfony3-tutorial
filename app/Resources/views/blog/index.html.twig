@@ -1,0 +1,22 @@
+{# app/Resources/views/blog/index.html.twig #}
+{% extends 'blog/layout.html.twig' %}
+{% block content %}
+    {% for entry in blog_entries %}
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        {{ entry.title }}
+                    </div>
+                    <div class="panel-body">
+                        <p>{{ entry.body }}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+    {% endfor %}
+{% endblock %}
+{% block stylesheets %}
+    <link href="{{ asset('css/blog/index.css') }}" rel="stylesheet" />
+{% endblock %}
