@@ -1,1 +1,7 @@
-/nbproject/private/
+**/nbproject/**
+**/cache/**
+**/logs/**
+/var/**
+/vendor/**
+/web/vendor/**
+!.gitignore
